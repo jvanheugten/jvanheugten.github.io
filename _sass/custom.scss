@@ -5,11 +5,60 @@ body {
   color: $base;
 }
 
-h1 {
-  color: $head1;
+$h_colors: $head1, $head2, $head3, $head4;
+@mixin code_blck () {
+	color: $cblk;
+	border-color: $border;
+	background: $cblk-ln-bg;
+	background-color: $cblk-ln-bg;
 }
 
-h2 {
-  color: $head2;
+@for $i from 1 through length($h_colors) {
+	h#{$i} { color: nth($h_colors, $i); }
 }
 
+code {
+	@include code_blck();
+}
+.highlighter-rouge .highlight {
+	@include code_blck();
+}
+.highlight {
+	@include code_blck();
+}
+
+.highlighter-rouge {
+	@include code_blck();
+}
+
+.post-title {
+	color: $post-title
+}
+
+a {
+	color: $a
+}
+
+a:visited {
+	color: $a-visited
+}
+
+.site-title {
+    color: $site-title;
+}
+
+.site-title:visited {
+    color: $site-title;
+}
+
+.site-nav .page-link {
+    color: $site-title
+}
+
+.site-footer {
+	border-top: 1px solid $border;
+}
+
+.site-header {
+	border-bottom: 1px solid $border;
+}
