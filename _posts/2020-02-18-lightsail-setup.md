@@ -1,8 +1,9 @@
 ---
 layout: post
 title: AWS Ligthsail Wordpress setup
-image: 
-categories: [Blog]
+image: https://lh3.googleusercontent.com/xN5uGSjex5ljdE7WAjjuDGyzZg_LQUKalFFXHJTX0O1bmCpPWjZQuhY8rW3oEbBaDW2SJbr3wITMpm3Tz4nf1bnyjSXb5iLjWU2wf7wtCG5r6cTrpNcjXU9l4TwgSlbaR9d8OY0fAJ839nHjXp0mDaac6OSsYJ0_D0V_7Q3mrfFPvBqTlvz6idlLiNKbcsP9v6JvyDRafJkPrR3Db99aLuuHUvkgB6pWULGezwwIarjqP2m5_fGozlG5WRII9NucZuNRFrsYLn4PlPbdF-PU8xkPdNgbuQg9XJkuByxT3XYUOxBLIULOpZ8Gf_RPkr8-qA1vXXo3knbe5UARRP1xuF_1x6Ltyhwn_boK0nxri9B4_VFbGplwrKTMWy8omISC_2-m5okGnM-2oLGM9TjwsHlQsrN491Ew_G9GnqFTiCC7gpz6VUDUxSg-XzbD90k9qEY5Nm_3jGdOZCnMcFRMfNThlhyaW37YAcySnqdm2gHRc4Y8g9Ih7vl3wDTFKo3koJafhdCCBQJrhS3TmWE1Oo57aGTv88VMFRONDmxf7K-JnO74fh-YojkobdoWUioyypl8d7_fTMKFGj4l6v0VoeFTsaTMa_fXDgf9Mn3gHUqciwtttUol-CQU8Vv1v6Pc7n_FeJXLps891w4MXfVjznC-VK6oy4HE518dVNWwp1g1B8kPrAfW9W59XCiKTyoIl_6QxA6zngitYxB7tg6wyh1ST3S9OKzvoNVeXRnU1epINKcT8fOOr7Y=w1416-h682-no
+image-border-radius: 5
+categories: [Web]
 tags: [aws]
 ---
 Instructions to setup [AWS Lightsail](https://aws.amazon.com/lightsail/) with [Wordpress](https://wordpress.org/)

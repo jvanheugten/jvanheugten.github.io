@@ -22,13 +22,16 @@ layout: default
           </a>
 	  {%- if post.image -%}
 	  <div style="text-align:center">
-	    <img src="{{ post.image | prepend: site.baseurl }}" alt="{{ post.title }}" title="{{ post.title }}">
+	    <img src="{{ post.image | prepend: site.baseurl }}" alt="{{ post.title }}" title="{{ post.title }}" style="border-radius: {{ post.image-border-radius | default: 0 }}%">
 	  </div>
 	  {%- endif -%}
         </h3>
         {%- if site.show_excerpts -%}
           {{ post.excerpt }}
         {%- endif -%}
+        {% if post.excerpt != post.content %}
+          <a href="{{ site.baseurl }}{{ post.url }}">[Read more]</a>
+        {% endif %}
       </li>
       {%- endfor -%}
     </ul>

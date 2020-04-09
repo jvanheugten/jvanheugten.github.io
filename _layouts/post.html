@@ -1,6 +1,9 @@
 ---
 layout: default
 ---
+
+{% include scripts.html %}
+
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
@@ -18,7 +21,7 @@ layout: default
   <div class="post-content e-content" itemprop="articleBody">
     {%- if page.image -%}
     <div style="text-align:center">
-        <img src="{{ page.image | prepend: site.baseurl }}" alt="{{ page.title }}" title="{{ page.title }}">
+        <img src="{{ page.image | prepend: site.baseurl }}" alt="{{ page.title }}" title="{{ page.title }}" style="border-radius: {{ page.image-border-radius | default: 0 }}%">
     </div>
     {%- endif -%}
     {{ content }}
