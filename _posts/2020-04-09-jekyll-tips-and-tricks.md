@@ -6,6 +6,8 @@ categories: [Web]
 tags: [Jekyll]
 ---
 
+A collection of tips and tricks on customizing Jekyll.
+
 ## Write raw Liquid (Jekyll syntax) in posts
 To blog about Jekyll's Liquid syntax without it being parsed, use the `raw` and `endraw` tags.  
 Reference: 
