@@ -55,7 +55,7 @@ It is also easy to add further customization options, such as the optional `imag
 
 The images will also show up on your homepage if you add the same line to `_layouts/home.html` after the `post.title` block with all `page`'s replaced by `post`.
 
-## Embedding YouTube videos in posts
+## Embedding responsive YouTube videos in posts
 First, create a YouTube embed script in `_includes/youtubePlayer.html`: 
 ```html
 <div style="text-align:center">
@@ -63,7 +63,26 @@ First, create a YouTube embed script in `_includes/youtubePlayer.html`:
     <br>
 </div>
 ```
-Second, to embed a YouTube video in a post write:
+Second, add the following to `_sass/custom.scss`:
+```css
+.embed-container { 
+	position: relative; 
+	padding-bottom: 56.25%; 
+	height: 0; 
+	overflow: hidden; 
+	max-width: 100%;
+	text-align: center
+} 
+
+.embed-container iframe, .embed-container object, .embed-container embed { 
+	position: absolute; 
+	top: 0; 
+	left: 0; 
+	width: 100%; 
+	height: 100%; 
+}
+```
+Finally, to embed a YouTube video in a post write:
 ```html
 {% raw %}{% include youtubePlayer.html id="tvTRZJ-4EyI" %}{% endraw %}
 ```
