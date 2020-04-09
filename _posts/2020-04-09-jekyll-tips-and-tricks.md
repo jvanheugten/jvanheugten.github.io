@@ -6,6 +6,11 @@ categories: [Web]
 tags: [Jekyll]
 ---
 
+## Write raw Liquid (Jekyll syntax) in posts
+To blog about Jekyll's Liquid syntax without it being parsed, use the `raw` and `endraw` tags.  
+Reference: 
+- [https://shopify.github.io/liquid/tags/raw/]()
+
 ## Rendering Latex Math in posts
 Latex Math is by default not rendered in Jekyll. To add MathJax support in Jekyll posts, create the following in `_includes/scripts.html`:
 
@@ -26,7 +31,7 @@ Latex Math is by default not rendered in Jekyll. To add MathJax support in Jekyl
 
 Then include the scripts at the top of the necessary page templates, such as `_layouts/post.html`:
 ```html
-{% include scripts.html %}
+{% raw %}{% include scripts.html %}{% endraw %}
 ```
 
 There are some quirks with rendering math in Jekyll  as it parses the markdown also for Jekyll scripts.
@@ -35,13 +40,14 @@ For example:
 - "`|`" can't be used, however, `\lVert` and `\rVert` should be used
 
 ## Post images
-To easily add an image to the top of posts, add the following to `post.html` before `{{content}}`:
+To easily add an image to the top of posts, add the following to `post.html` before `content`:
+
 ```html
-{%- if page.image -%}
+{% raw %}{\%- if page.image -%}
 <div style="text-align:center">
     <img src="{{ page.image | prepend: site.baseurl }}" alt="{{ page.title }}" title="{{ page.title }}" style="border-radius: {{ page.image-border-radius | default: 0 }}%">
 </div>
-{%- endif -%}
+{\%- endif -%}{% endraw %}
 ```
 
 Images can now be added by specifying their link in the post metadata: `image: http://link-to-my-image`.  
@@ -59,16 +65,16 @@ First, create a YouTube embed script in `_includes/youtubePlayer.html`:
 ```
 Second, to embed a YouTube video in a post write:
 ```html
-{% include youtubePlayer.html id="tvTRZJ-4EyI" %}
+{% raw %}{% include youtubePlayer.html id="tvTRZJ-4EyI" %}{% endraw %}
 ```
 
 ## "Read more" link on the homepage
 To add a "Read more" link if a post excerpt is not full content, add the following to `_layouts/home.html` after the `site.show_excerpts` block:
 ```html
-{% if post.excerpt != post.content %}
+{% raw %}{% if post.excerpt != post.content %}
     <a href="{{ site.baseurl }}{{ post.url }}">Read more</a>
-{% endif %}
+{% endif %}{% endraw %}
 ```
 
 # References
-- https://muffinman.io/jekyll-read-more-link/
+- [https://muffinman.io/jekyll-read-more-link/]()
