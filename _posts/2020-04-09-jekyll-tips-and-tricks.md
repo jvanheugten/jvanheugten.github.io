@@ -59,7 +59,7 @@ The images will also show up on your homepage if you add the same line to `_layo
 First, create a YouTube embed script in `_includes/youtubePlayer.html`: 
 ```html
 <div style="text-align:center">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ include.id }}" frameborder="0" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/{{ include.id }}" frameborder="0" allowfullscreen></iframe>
     <br>
 </div>
 ```

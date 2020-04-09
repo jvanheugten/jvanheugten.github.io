@@ -8,9 +8,10 @@ categories: [Deep Learning]
 tags: [deeplearning]
 ---
 
-A short review of [https://www.coursera.org/specializations/deep-learning?](Deeplearning.ai's Deep Learning Specialization) on Coursera.
+A short review of [Deeplearning.ai's Deep Learning Specialization](https://www.coursera.org/specializations/deep-learning) on Coursera.
 
-# Review of Deeplearning.ai's Deep Learning Specialization on Coursera
+=== Work in progress ===
+
 - no discussion of ethics
 - little mention on importance of data science (EDA)
 - Structuring ML Projects: creating dev set is data science!
